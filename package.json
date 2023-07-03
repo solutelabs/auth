@@ -42,7 +42,7 @@
     "@nestjs/typeorm": "^7.1.5",
     "@types/passport-jwt": "^3.0.8",
     "apollo-server-express": "^3.10.0",
-    "aws-sdk": "^2.1190.0",
+    "aws-sdk": "^2.1409.0",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "bull": "^3.22.0",
@@ -75,7 +75,7 @@
     "rxjs": "^7.2.0",
     "swagger-ui-express": "^4.6.1",
     "twilio": "^3.80.0",
-    "typeorm": "^0.2.32",
+    "typeorm": "^0.3.17",
     "winston": "^3.8.1"
   },
   "devDependencies": {
