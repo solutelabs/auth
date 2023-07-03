@@ -1,0 +1,31 @@
+import { AuthService } from './auth.service';
+import { LoginDto, MagicLinkDto, MobileDto, SignupDto, GoogleAuthDto } from './dto';
+import { UserEntity } from './entity';
+import { IAuthResponse } from './interface';
+export declare class AuthController {
+    private readonly authService;
+    constructor(authService: AuthService);
+    test(): Promise<string>;
+    appleAuth(req: any): Promise<any>;
+    appleAuthRedirect(payload: any): Promise<IAuthResponse>;
+    GoogleAuthSignUp(data: GoogleAuthDto): Promise<IAuthResponse>;
+    GoogleAuthSignIn(data: GoogleAuthDto): Promise<IAuthResponse>;
+    LinkGoogleAccount(data: any, user: any): Promise<string>;
+    twitter(): Promise<void>;
+    twitterRedirect(req: any, res: any): Promise<void>;
+    LinkTwitterAccount(req: any, res: any, data: any): Promise<void>;
+    profile(userAuth: any, res: any): Promise<any>;
+    facebook(): Promise<void>;
+    facebookRedirect(req: any, res: any): Promise<string>;
+    LinkFacebookAccount(req: any, res: any, data: any): Promise<void>;
+    signup(data: SignupDto): Promise<any>;
+    login(data: LoginDto): Promise<IAuthResponse>;
+    generateMagicLink(data: MagicLinkDto): Promise<import("./model").MagicLinkResponse>;
+    loginViaMagicLink(token: string): Promise<IAuthResponse>;
+    signupMobile(data: MobileDto): Promise<IAuthResponse>;
+    loginMobile(data: MobileDto): Promise<IAuthResponse>;
+    updateContact(user: UserEntity, data: MobileDto): Promise<IAuthResponse>;
+    refreshToken(refreshToken: string): Promise<IAuthResponse>;
+    signupWhatsApp(data: MobileDto): Promise<IAuthResponse | any>;
+    loginWhatsapp(data: MobileDto): Promise<IAuthResponse | any>;
+}
